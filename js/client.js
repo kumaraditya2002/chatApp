@@ -3,6 +3,7 @@ const socket = io('http://localhost:8000');
 const form = document.getElementById('send-container');
 const messageinp = document.getElementById('messageinp');
 const messageConatiner = document.querySelector('.container');
+var audio = new Audio('ting.mp3');
 
 form.addEventListener('submit',e=>{
     e.preventDefault();
@@ -13,6 +14,7 @@ form.addEventListener('submit',e=>{
 });
 
 const name = prompt('Hi please enter your name to join!');
+messageConatiner.innerHTML = `<h3 style="text-align:center;">Hey ${name} add your freinds to chat!<h3>`
 socket.emit('new-user-joined',name);
 
 socket.on('user-joined',name=>{
@@ -31,4 +33,6 @@ const append = (message,pos)=>{
     messageElement.classList.add('message');
     messageElement.classList.add(pos);
     messageConatiner.append(messageElement);
+    if(pos === 'left')
+        audio.play();
 }
