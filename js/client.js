@@ -21,6 +21,9 @@ socket.on('user-joined',name=>{
 socket.on('recieve',data=>{
     append(`${data.name}: ${data.message}`,'left');
 });
+socket.on('left',name=>{
+    append(`${name} left the chat!`,'left');
+});
 
 const append = (message,pos)=>{
     const messageElement = document.createElement('div');
