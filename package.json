@@ -1,0 +1,23 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "A real time chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumaraditya2002/chatApp.git"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumaraditya2002/chatApp/issues"
+  },
+  "homepage": "https://github.com/kumaraditya2002/chatApp#readme",
+  "dependencies": {
+    "nodemon": "^2.0.6",
+    "socket.io": "^3.0.3"
+  }
+}
